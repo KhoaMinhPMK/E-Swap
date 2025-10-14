@@ -30,21 +30,27 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Giới thiệu Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <h1 className="text-3xl md:text-4xl font-bold mb-8">Khi cam kết Net Zero 2050 gặp thực tế đô thị</h1>
+            
+            <div className="prose prose-lg dark:prose-invert max-w-none space-y-6">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Dự án <strong>E-Swap</strong> được khởi xướng vào năm {COMPANY_INFO.founded} bởi một nhóm sinh viên đam mê công nghệ xanh từ các trường <strong>UIT, BKU, UEH</strong> thuộc ĐHQG TP.HCM. Với khát vọng giải quyết bài toán nan giải của giao thông điện tại Việt Nam, chúng tôi đã nghiên cứu và phát triển một <strong>Mô hình Trung tâm Năng lượng Xanh 2-trong-1</strong> hoàn toàn mới.
+                Việt Nam cam kết tương lai không phát thải vào năm 2050. Nhưng với hơn 77 triệu xe máy trên đường, câu hỏi không phải là "liệu chúng ta có thể?" mà là "làm thế nào để chuyển đổi không bỏ ai lại phía sau?". Giao thông xanh không thể chỉ là giấc mơ của những người có đủ thời gian chờ 8 tiếng để sạc pin, hay đủ tiền để chấp nhận bị ràng buộc bởi một hệ sinh thái đóng kín. Nó phải là giải pháp dành cho tất cả, từ người giao hàng chạy 100km mỗi ngày đến sinh viên lo lắng về quãng đường còn lại trên đồng hồ pin.
               </p>
 
-              <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-                Dự án được dẫn dắt bởi đội ngũ sáng lập gồm <strong>{TEAM_MEMBERS[0].name}</strong> ({TEAM_MEMBERS[0].role}), <strong>{TEAM_MEMBERS[1].name}</strong> ({TEAM_MEMBERS[1].role}), <strong>{TEAM_MEMBERS[2].name}</strong> ({TEAM_MEMBERS[2].role}), <strong>{TEAM_MEMBERS[3].name}</strong> ({TEAM_MEMBERS[3].role}), và <strong>{TEAM_MEMBERS[4].name}</strong> ({TEAM_MEMBERS[4].role}).
+              <h1 className="text-3xl md:text-4xl font-bold mt-12 mb-8">Xanh thực sự, hay chỉ chuyển ô nhiễm sang nơi khác?</h1>
+
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                68% người dùng xe điện đang sống với nỗi lo hết pin (range anxiety). 75% người đi xe xăng từ chối chuyển đổi vì thời gian sạc quá lâu. Nhưng đây chưa phải vấn đề lớn nhất. Sự thật đằng sau "làn sóng xanh" là phần lớn xe điện vẫn sạc bằng điện từ than đá. Chúng ta chỉ đang di chuyển khói độc từ ống xả xe máy sang ống khói nhà máy điện. Đây không phải là tương lai mà thế hệ tiếp theo xứng đáng có được.
               </p>
 
-              <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-                Chúng tôi nhận thấy hai vấn đề lớn của thị trường xe điện hiện nay: <strong>(1)</strong> Nguồn phát thải chỉ được "di dời" khi sạc pin bằng điện lưới từ nhiên liệu hóa thạch, và <strong>(2)</strong> Thị trường bị phân mảnh bởi các hệ sinh thái khép kín. E-Swap ra đời để phá vỡ những rào cản đó thông qua hạ tầng năng lượng mở, sử dụng 100% năng lượng tái tạo từ mặt trời.
+              <h1 className="text-3xl md:text-4xl font-bold mt-12 mb-8">E-Swap: Khi năng lượng mặt trời gặp công nghệ đổi pin</h1>
+
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Giải pháp này không chỉ dành cho những người tiên phong, mà cho tất cả những ai đang di chuyển mỗi ngày. E-Swap là trạm đổi pin đầu tiên vận hành 100% bằng năng lượng mặt trời. Không phát thải từ đầu đến cuối, thực sự xanh từ "giếng dầu tới bánh xe". Đổi pin dưới 2 phút, không chờ đợi. Nền tảng mở cho mọi hãng xe, không vendor lock-in. Đây là cách chúng ta giữ lời hứa Net Zero 2050, một lần đổi pin một.
               </p>
             </div>
           </div>
@@ -177,18 +183,16 @@ export default function AboutPage() {
             </div>
 
             {/* Team Members Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="flex flex-wrap justify-center gap-8 mb-12">
               {TEAM_MEMBERS.map((member, idx) => (
-                <div key={idx} className="relative group">
+                <div key={idx} className="relative group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-green-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
                   <div className="relative bg-white/80 dark:bg-background/80 backdrop-blur-xl rounded-3xl p-6 border border-emerald-200/50 dark:border-emerald-800/30 shadow-xl h-full hover:scale-105 transition-transform">
                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mx-auto mb-4 shadow-lg text-white text-2xl font-bold">
                       {member.name.split(' ').pop()?.charAt(0)}
                     </div>
                     <h3 className="text-xl font-bold text-center mb-2">{member.name}</h3>
-                    <p className="text-sm text-emerald-600 dark:text-emerald-400 text-center font-medium mb-2">{member.role}</p>
-                    <p className="text-xs text-muted-foreground text-center mb-3">{member.school}</p>
-                    <p className="text-sm text-muted-foreground text-center leading-relaxed">{member.bio}</p>
+                    <p className="text-sm text-muted-foreground text-center">{member.school}</p>
                   </div>
                 </div>
               ))}
